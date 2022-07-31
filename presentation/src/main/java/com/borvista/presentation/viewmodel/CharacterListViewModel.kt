@@ -46,10 +46,9 @@ class CharacterListViewModel @Inject constructor(
         }
 
         _characterList.postValue(CharacterUIModel.Loading)
-         launchCoroutineIO {
-                loadCharacters(query)
-            }
-
+        launchCoroutineIO {
+            loadCharacters(query)
+        }
     }
 
     private suspend fun loadCharacters(query: String) {
@@ -62,7 +61,6 @@ class CharacterListViewModel @Inject constructor(
 
     fun search(text: CharSequence?) {
 
-
         val filtred = text?.let { searched ->
             allCharacters.filter { character ->
 
@@ -73,8 +71,5 @@ class CharacterListViewModel @Inject constructor(
             }
         } ?: allCharacters
         _characterList.postValue(CharacterUIModel.Success(filtred))
-
-
     }
-
 }

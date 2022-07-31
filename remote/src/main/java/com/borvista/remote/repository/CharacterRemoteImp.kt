@@ -16,5 +16,4 @@ class CharacterRemoteImp @Inject constructor(
             characterEntityMapper.mapFromModel(characterModel)
         }
     }
-
 }

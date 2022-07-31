@@ -12,5 +12,4 @@ class CharacterRemoteDataSource @Inject constructor(
     override suspend fun getCharacters(query: String): List<CharacterEntity> {
         return characterRemote.getCharacters(query)
     }
-
 }

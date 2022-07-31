@@ -26,5 +26,4 @@ object AppModule {
             .error(R.drawable.placeholder)
             .diskCacheStrategy(DiskCacheStrategy.DATA)
     )
-
 }

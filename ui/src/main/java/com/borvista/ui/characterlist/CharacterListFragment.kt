@@ -31,7 +31,6 @@ class CharacterListFragment : BaseFragment<FragmentCharacterListBinding, BaseVie
     @Inject
     lateinit var characterAdapter: CharacterAdapter
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.fetchCharacters(BuildConfig.QUERY)

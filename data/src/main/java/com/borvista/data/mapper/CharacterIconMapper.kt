@@ -11,6 +11,4 @@ class CharacterIconMapper @Inject constructor() : Mapper<CharacterIconEntity, St
     override fun mapToEntity(type: String): CharacterIconEntity {
         return CharacterIconEntity(type)
     }
-
-
 }

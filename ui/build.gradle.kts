@@ -56,8 +56,6 @@ android {
                 "QUERY",
                 "\"the+wire+characters\""
             )
-
-
         }
     }
 
@@ -114,5 +112,4 @@ dependencies {
     implementation(UiDep.timber)
     // Lottie animation
     implementation(UiDep.lottie)
-
-    }
+}

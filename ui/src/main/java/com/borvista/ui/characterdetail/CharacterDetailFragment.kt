@@ -17,7 +17,6 @@ class CharacterDetailFragment : BaseFragment<FragmentCharacterDetailBinding, Bas
     override fun getViewBinding(): FragmentCharacterDetailBinding =
         FragmentCharacterDetailBinding.inflate(layoutInflater)
 
-
     private val args: CharacterDetailFragmentArgs by navArgs()
 
     @Inject
@@ -32,17 +31,13 @@ class CharacterDetailFragment : BaseFragment<FragmentCharacterDetailBinding, Bas
 
         handleLoading(false)
 
-            binding.apply {
-                binding.textViewCharacterName.text = args.characterName
-                glide.load(BuildConfig.BASE_URL+args.characterImage).into(imageViewCharacter)
-                textViewCharacterDescription.text = args.characterDescription
-
+        binding.apply {
+            binding.textViewCharacterName.text = args.characterName
+            glide.load(BuildConfig.BASE_URL + args.characterImage).into(imageViewCharacter)
+            textViewCharacterDescription.text = args.characterDescription
         }
-
     }
 
     override val viewModel: BaseViewModel
         get() = TODO("Not need yet")
-
-
 }

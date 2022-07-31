@@ -7,6 +7,5 @@ import retrofit2.http.Query
 interface CharacterService {
 
     @GET("/")
-    suspend fun getCharacters(@Query("q", encoded=true)q:String,@Query("format")format:String = "json"): CharacterResponseModel
-
+    suspend fun getCharacters(@Query("q", encoded = true)q: String, @Query("format")format: String = "json"): CharacterResponseModel
 }
